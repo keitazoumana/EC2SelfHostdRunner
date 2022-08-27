@@ -9,6 +9,6 @@ credentials:
 
 
   mlflow_credentials:
-    MLFLOW_TRACKING_URI: "https://dagshub.com/zoumana.keita/EC2_Self_Hosted_Runner.mlflow"
+    MLFLOW_TRACKING_URI: "https://dagshub.com/zoumana.keita/EC2_Self_Hosted_Runner_V1.mlflow"
     MLFLOW_TRACKING_USERNAME: "zoumana.keita"
     MLFLOW_TRACKING_PASSWORD: "eb68a4accdf21c0dffe8f3defeca181d4a7fd6f5"
