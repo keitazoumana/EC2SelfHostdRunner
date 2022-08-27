@@ -8,9 +8,9 @@ jobs:
       - uses: iterative/setup-cml@v1
       - name: Runner deployment on EC2
         env:
-          REPO_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }}
+          REPO_TOKEN: "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"
+          AWS_ACCESS_KEY_ID: "AKIAQ2YJKANVJUVGHWSQ"
+          AWS_SECRET_ACCESS_KEY: "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"
         run: |
           cml runner \
               --cloud=aws \
@@ -31,7 +31,7 @@ jobs:
           node-version: '16'
       - name: Model Training
         env:
-          REPO_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          REPO_TOKEN: "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"
         run: |
           cml ci
           pip install -r requirements.txt
