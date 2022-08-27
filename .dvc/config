@@ -1,0 +1,4 @@
+[core]
+    no_scm = True
+['remote "origin"']
+    url = https://dagshub.com/zoumana.keita/EC2_Self_Hosted_Runner.dvc
