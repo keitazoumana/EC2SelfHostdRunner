@@ -1,0 +1,32 @@
+stages:
+  get_data:
+    cmd: python get_data.py
+    deps:
+    - get_data.py
+    outs:
+    - data/raw/airline_sentiment_data.csv
+
+  prepare_data:
+    cmd: python prepare_data.py
+    deps:
+    - prepare_data.py
+    - data/raw/airline_sentiment_data.csv
+    outs:
+    - data/preprocessed/airline_sentiment_preprocessed_data.csv
+
+  train_model:
+    cmd: python train_model.py
+    deps:
+    - train_model.py
+    - data/preprocessed/airline_sentiment_preprocessed_data.csv
+    
+    outs:
+    - metadata/metrics.json
+    - model/bert_model.model
+
+  save_metadata_to_dvc:
+    cmd: python save_metadata.py
+    deps:
+    - save_metadata.py
+    - metadata/metrics.json
+    - model/bert_model

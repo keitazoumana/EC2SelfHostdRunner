@@ -1,0 +1,3 @@
+ec2_self_hosted_env/
+./dvc/cache/
+./dvc/tmp/
