@@ -1,14 +1,22 @@
 credentials:
   github:
-    PERSONAL_ACCESS_TOKEN: "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"
+    PERSONAL_ACCESS_TOKEN: "[YOURS]"
 
-  
   aws:
-    ACCESS_KEY_ID: "AKIAQ2YJKANVJUVGHWSQ"
-    SECRET_ACCESS_KEY: "LhrebIsMtTvLASa6RyQoROJK9RVd+oMVTpTMC0bb"
-
+    ACCESS_KEY_ID: "[YOURS]"
+    SECRET_ACCESS_KEY: "[YOURS]"
 
   mlflow_credentials:
-    MLFLOW_TRACKING_URI: "https://dagshub.com/zoumana.keita/EC2_Self_Hosted_Runner_V1.mlflow"
-    MLFLOW_TRACKING_USERNAME: "zoumana.keita"
-    MLFLOW_TRACKING_PASSWORD: "eb68a4accdf21c0dffe8f3defeca181d4a7fd6f5"
+    MLFLOW_TRACKING_URI: "[YOURS]"
+    MLFLOW_TRACKING_USERNAME: "[YOURS]"
+    MLFLOW_TRACKING_PASSWORD: "[YOURS]"
+
+  dvc_config:
+    DAGSHUB_REMOTE_URL: "[YOURS]"
+    USERNAME: "[YOURS]"
+    PASSWORD: "[YOURS]"
+    
+  metadata_path:
+    METRICS_PATH: "./metrics"
+    METRICS_FILE: "./metrics/metrics.json"
+    MODEL_PATH: "./model"
