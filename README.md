@@ -11,5 +11,5 @@ After completing this repository, you will be able to understand the following c
 - Automatically save your training metadata on [DVC](https://dvc.org/) for easy tracking. 
 
 <p align="center">
-  <img src="./images/general_workflow.png" alt="MLOps Workflow" height="400" width="600"/>
+  <img src="./images/general_workflow.png" alt="MLOps Workflow" height="500" width="800"/>
 </p>
