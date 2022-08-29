@@ -1,13 +1,3 @@
-"""
-import pandas as pd 
-
-data_path = "./data/airline_sentiment_data.csv"
-data = pd.read_csv(data_path)
-
-print(data.head())
-
-print(data.airline_sentiment.value_counts())
-"""
 import json
 import pandas as pd
 import random
@@ -24,9 +14,6 @@ from transformers import BertTokenizer
 from torch.utils.data import DataLoader, RandomSampler, SequentialSampler, TensorDataset
 from transformers import BertTokenizer,  AutoModelForSequenceClassification, AdamW, get_linear_schedule_with_warmup
 import torch
-
-
-
 
 
 # Load the preprocessed data
@@ -213,8 +200,6 @@ for epoch in tqdm(range(1, epochs+1)):
     loss_train_avg = loss_train_total/len(dataloader_train)            
     val_loss, predictions, true_vals = evaluate(dataloader_validation)
     val_f1 = f1_score_func(predictions, true_vals)
-
-
 
 
 if __name__ == "__main__":
