@@ -215,17 +215,18 @@ for epoch in tqdm(range(1, epochs+1)):
     val_f1 = f1_score_func(predictions, true_vals)
 
 
-
-
 if __name__ == "__main__":
 
-
-    mlflow_config = yaml.safe_load(open("config.yaml"))["credentials"]["mlflow_credentials"]
-    metrics_file = "./metrics/metrics.json"
+    credentials = yaml.safe_load(open("config.yaml"))["credentials"]
+    mlflow_config = credentials["mlflow_credentials"]
 
     MLFLOW_TRACKING_URI= mlflow_config['MLFLOW_TRACKING_URI']
     MLFLOW_TRACKING_USERNAME = mlflow_config['MLFLOW_TRACKING_USERNAME']
     MLFLOW_TRACKING_PASSWORD = mlflow_config['MLFLOW_TRACKING_PASSWORD'] 
+
+    # Metrics file
+    meta_data = credentials["metadata_path"]
+    metrics_file = meta_data["METRICS_FILE"]
 
     os.environ['MLFLOW_TRACKING_USERNAME'] = MLFLOW_TRACKING_USERNAME
     os.environ['MLFLOW_TRACKING_PASSWORD'] = MLFLOW_TRACKING_PASSWORD
