@@ -54,3 +54,6 @@ The following graphics shows the performances of the models for different epochs
 <p align="center">
   <img src="./images/before_after_pull_request.png" alt="Metrics before and After pull request"/>
 </p>
+
+## Full Article On Medium 
+Read the full article on [my medium](https://zoumanakeita.medium.com/) and Follow me for more content.
