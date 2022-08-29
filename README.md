@@ -12,7 +12,7 @@ After completing this repository, you will be able to understand the following c
 - Automatically save your training metadata on [DVC](https://dvc.org/) for easy tracking. 
 
 <p align="center">
-  <img src="./images/general_workflow.png" alt="MLOps Workflow" height="200"/>
+  <img src="./images/general_workflow.png" alt="MLOps Workflow"/>
 </p>
 
 # Getting started  
@@ -52,5 +52,5 @@ The following graphics shows the performances of the models for different epochs
 - Recall = 0.91  
 
 <p align="center">
-  <img src="./images/before_after_pull_request.png" alt="Metrics before and After pull request" height="200"/>
+  <img src="./images/before_after_pull_request.png" alt="Metrics before and After pull request"/>
 </p>
