@@ -20,3 +20,4 @@ credentials:
     METRICS_PATH: "./metrics"
     METRICS_FILE: "./metrics/metrics.json"
     MODEL_PATH: "./model"
+    RAW_DATA_PATH: "./data/raw"
