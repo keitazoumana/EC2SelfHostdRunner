@@ -1,10 +1,12 @@
-name: CI/CD Workflow
+name: Training on EC2 selfhosted Runner
 on: [push, pull_request]
+
 jobs:
-  deploy-runner:
+  deploy-runner: # (1) Deployment of the EC2 runner 
     runs-on: [ubuntu-latest]
     steps:
       - uses: actions/checkout@v2
+      - uses: iterative/setup-cml@v1
       - name: Runner deployment on EC2
         env:
           REPO_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
@@ -17,9 +19,9 @@ jobs:
               --cloud-type=t2.micro \
               --labels=cml-runner
 
-  train-model:
+  train-model: # (2) Training of the model 
     needs: deploy-runner
-    runs-on: [self-hosted, cml-runner]
+    runs-on: [cml-runner]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
@@ -36,3 +38,9 @@ jobs:
           pip install -r requirements.txt
           python get_data.py
           python train_model.py
+
+  save_metadata: # (3) Push the metadata to DVC
+    runs-on: [cml-runner]
+    steps:
+      - name: Save metadata into DVC
+        run: python save_metadata.py
