@@ -40,16 +40,16 @@ DagsHub provides the capabilities to use MLFlow and DVC while giving the choice 
 ### MLFlow metrics before and after pull request. 
 The following graphics shows the performances of the models for different epochs. 
 #### Before the pull request:
--- Epoch = 1  
--- F1 score = 0.89  
--- Precision = 0.88 
--- Recall = 0.85  
+- Epoch = 1  
+- F1 score = 0.89  
+- Precision = 0.88 
+- Recall = 0.85  
 
 #### After the pull request:
--- Epoch = 2  
--- F1 score = 0.92  
--- Precision = 0.90 
--- Recall = 0.91  
+- Epoch = 2  
+- F1 score = 0.92  
+- Precision = 0.90 
+- Recall = 0.91  
 
 <p align="center">
   <img src="./images/before_after_pull_request.png" alt="Metrics before and After pull request" height="200"/>
