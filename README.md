@@ -46,6 +46,7 @@ The following graphics shows the performances of the models for different epochs
 - Recall = 0.85  
 
 #### After the pull request:
+⚠️ Beware that the wall time for 1 epochs training is 2h45 minutes. So might expect the double for two epochs. 
 - Epoch = 2  
 - F1 score = 0.92  
 - Precision = 0.90 
